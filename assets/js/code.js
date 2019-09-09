@@ -3,14 +3,14 @@ $("ul").on("click", "li", function() {
 });
 
 $("ul").on("click", "span", function(event) {
-	$(this).parent().fadeOut(500, function() {
+	$(this).parent().parent().slideUp(200, function() {
 		$(this).remove();
 	});
 	event.stopPropagation();
 });
 
-$("input[type='text']").keypress(function(event) {
-	if (event.which === 13) {
+$("input").on("keypress", function(event) {
+	if (event.which === 13 && $(this).val().replace(/\s/g, "") != "") {
 		let textVal = $(this).val();
 		$(this).val("");
 		$("ul").append(getLi(textVal));
@@ -18,9 +18,9 @@ $("input[type='text']").keypress(function(event) {
 });
 
 $(".fa-plus").on("click", function() {
-	$("input[type='text']").fadeToggle();
+	$("#input").slideToggle();
 });
 
 function getLi(text) {
-	return "<li><span><i class='fa fa-trash'></i></span> " + text + "</li>";
+	return "<div><li><span><i class='fa fa-trash'></i></span> " + text + "</li></div>";
 }
