@@ -24,5 +24,5 @@ $(".fa-plus").on("click", function() {
 });
 
 function getLi(text) {
-	return "<div id='last' style='display: none;'><li><span><i class='fa fa-trash'></i></span> " + text + "</li></div>";
+	return "<div id='last'><li><span><i class='fa fa-trash'></i></span> " + text + "</li></div>";
 }

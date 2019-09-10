@@ -85,6 +85,10 @@ li:hover span {
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
+#last {
+	display: none;
+}
+
 .done {
 	text-decoration: line-through;
 	color: gray;
